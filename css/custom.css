@@ -1,0 +1,24 @@
+@CHARSET "ISO-8859-1";
+
+@
+font-face {
+	font-family: FuturaStd-HeavyOblique;
+	src: url('../fonts/FUTURASTD-HEAVYOBLIQUE.OTF');
+}
+
+@
+font-face {
+	font-family: COUTURE Bold;
+	src: url('../fonts/COUTURE-Bold.ttf');
+}
+
+body {
+	background-color: black;
+	color: white;
+	height: 100%;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.logout{
+	color: red;
+}
