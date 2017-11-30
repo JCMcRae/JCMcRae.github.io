@@ -15,12 +15,9 @@ body {
 .title {
 	text-align: center;
 	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-bottom: 250px;
 }
 
-.intro {
-	margin-top: 100px;
-}
 
 #j {
 	font-family: LaurenScript Regular;
