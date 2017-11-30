@@ -12,7 +12,9 @@ body {
 	height: 100%;
 }
 
-
+.title{
+	text-align: center;
+}
 
 #j {
 	font-family: LaurenScript Regular;
