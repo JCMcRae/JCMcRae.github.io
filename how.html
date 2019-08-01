@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>McRae Design - How</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="main.css">
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_YqYy9CSVjI6SxkfJaLHU1");
+   })();
+</script>
+</head>
+<body class="site">
+	<main class="content">
+		<div class="container middle">
+			<div class="container center">
+				<p class="how-main-text">Reach Out</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="form-group col-md-6">
+					<div class="form-group">
+						<input type="text" class="form-control contact-form" id="name" aria-describedby="fnameHelp" placeholder="">
+    					<small id="nameHelp" class="form-text text-muted footer-contact contact">Name</small>
+					</div>
+    				<div class="form-group">
+    					<input type="email" class="form-control contact-form" id="email" aria-describedby="emailHelp" placeholder="">
+    					<small id="emailHelp" class="form-text text-muted footer-contact contact">Email</small>
+  					</div>
+		  			<div class="form-group">
+		    			<input type="text" class="form-control contact-form" id="subject" aria-describedby="subjectHelp" placeholder="">
+		    			<small id="subjectHelp" class="form-text text-muted footer-contact contact">Subject</small>
+		  			</div>
+  				</div>
+  				<div class="form-group col-md-6 col-md-offset-6">
+  					<div class="form-group">
+		    			<textarea rows="10" cols="70" class="contact-body" id="message">
+						</textarea>
+		    			<small id="bodyHelp" class="form-text text-muted footer-contact contact">Message</small>
+  					</div>
+  				</div>
+			</div>
+			<p class="lead">
+				<a href="finish.html" class="btn btn-lg btn-secondary contact-button" onclick="sendEmail()">Send</a>
+			</p>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white">
+	  		<div class="center">
+	  			<nav>
+				    <a class="p-2 text-dark" href="who.html">Who</a>
+				    <a class="p-2 text-dark" href="what.html">What</a>
+				    <a class="p-2 text-dark" href="how.html">How</a>
+	  			</nav>
+	  		</div>
+		</div>
+		<p class="allrights">All Rights Reserved McRae Design</p>
+	</footer>
+</body>
+<script>
+	function sendEmail(){
+		var name = document.getElementById('name').value;
+		var email = document.getElementById('email').value;
+		var subject = document.getElementById('subject').value;
+		var message = document.getElementById('message').value;
+		var template_params = {
+			   "from_name": name,
+			   "email" : email,
+			   "subject": subject,
+			   "message_html": message
+			}
+
+		var service_id = "default_service";
+		var template_id = "contact";
+		emailjs.send(service_id, template_id, template_params);	
+	}
+</script>
+</html>

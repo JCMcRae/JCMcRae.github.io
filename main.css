@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+@font-face {
+   font-family: 'LaurenScript';
+   src: url('font/LaurenScript.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Floorlight';
+   src: url('font/Floorlight.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Library';
+   src: url('font/Library 3 am.otf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Sophia';
+   src: url('font/Sophia Bella DEMO.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Amiko';
+   src: url('font/Amiko-Regular.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Woolacombe-Outline';
+   src: url('font/Woolacombe-Outline.otf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Staubach';
+   src: url('font/Staubach.ttf') format('truetype');
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.center {
+	text-align: center;
+	display:block;
+    margin:auto;
+}
+
+.middle {
+	margin-top: 100px;
+}
+
+.index-main-text {
+	font-family: 'LaurenScript';
+	color: #011892;
+	font-size: 350px;
+}
+
+.index-sub-text {
+	font-family: 'Sophia';
+	font-size: xx-large;
+	color: black;
+	margin-top: -150px;
+	margin-right: -300px;
+}
+
+.j {
+	font-family: 'LaurenScript';
+	color: black;
+	font-size: 250px;
+	text-align: right;
+}
+
+.who-main-text {
+	margin-top: 100px;
+	font-family: 'Sophia';
+	color: black;
+	font-size: 70px;
+	text-align: left;
+}
+
+.who-sub-text {
+	font-family: 'Sophia';
+	font-size: xx-large;
+	color: black;
+}
+
+.resume {
+	color: #011892;
+	font-size: small;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.role {
+	color: red;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	font-style: italic;
+}
+
+.description {
+	color: black;
+	font-size: x-small;
+	text-transform: uppercase;
+	text-indent: 30px;
+}
+
+.how-main-text {
+	font-family: 'Amiko';
+	color: black;
+	font-size: medium;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.how-sub-text {
+	font-family: 'Sophia';
+	font-size: xx-large;
+	color: black;
+}
+
+.site {
+	display: flex;
+  	min-height: 100vh;
+  	flex-direction: column;
+  	color: black;
+}
+
+.content {
+	flex: 1;
+	margin-bottom: 50px;
+}
+
+.contact {
+	text-transform: uppercase;
+	font-size: xx-small;
+	letter-spacing: 2px;
+}
+
+.contact-form {
+	border: none;
+	outline: 0;
+	border-bottom: 1px solid black;
+	border-radius: 0px;
+}
+
+.contact-body {
+	border: 1px solid black;
+	font-family: 'Amiko';
+	text-align: left;
+	font-size: small;
+}
+
+.contact-button {
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: small;
+}
+
+.finish-sub-text {
+	margin-top: 100px;
+	color: #011892;
+	font-size: small;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.footer {
+	text-align: center;
+	font-size: small;
+	color: rgba(82, 82, 82, .6);
+	letter-spacing: 2px;
+}
+
+.amr-image {
+	max-width: 300px;
+	height: auto;
+}
+
+.ttfp {
+	font-family: 'Woolacombe-Outline';
+	font-size: 100px;
+	font-style: italic;
+	color: black;
+}
+
+.cys {
+	font-family: 'Amiko';
+	font-size: 50px;
+	text-transform: uppercase;
+	color: black;
+}
+
+.gws {
+	font-family: 'Staubach';
+	font-size: 50px;
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	color: black;
+}
+
+.allrights {
+	font-size: x-small;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #011892;
+}
