@@ -208,6 +208,11 @@ a:hover {
 	color: black;
 }
 
+.iv-image {
+	max-width: 300px;
+	height: auto;
+}
+
 .allrights {
 	font-size: x-small;
 	letter-spacing: 2px;
