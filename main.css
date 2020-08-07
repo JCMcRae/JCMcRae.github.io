@@ -166,6 +166,13 @@ a:hover {
 	font-size: small;
 }
 
+.how-j-text {
+	font-family: 'LaurenScript';
+	color: #011892;
+	font-size: 350px;
+	text-align: right;
+}
+
 .finish-sub-text {
 	margin-top: 100px;
 	color: #011892;

@@ -12,6 +12,32 @@
       emailjs.init("user_YqYy9CSVjI6SxkfJaLHU1");
    })();
 </script>
+<script type="text/javascript">
+	window.onload = function() {
+	    document.getElementById('contact-form').addEventListener('submit', function(event) {
+	    	debugger;
+	    	var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var subject = document.getElementById('subject').value;
+			var message = document.getElementById('message').value;
+			var template_params = {
+				   "from_name": name,
+				   "email" : email,
+				   "subject": subject,
+				   "message_html": message
+				}
+			
+			var service_id = "mcraeDesign";
+			var template_id = "contact";
+			emailjs.send(service_id, template_id, template_params, 'user_YqYy9CSVjI6SxkfJaLHU1').then(function(response) {
+			       console.log('SUCCESS!', response.status, response.text);
+			       window.location.href = 'finish.html';
+		    }, function(error) {
+		       console.log('FAILED...', error);
+		    });
+        });	    
+	}
+</script>
 </head>
 <body class="site">
 	<main class="content">
@@ -22,31 +48,38 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="form-group col-md-6">
-					<div class="form-group">
-						<input type="text" class="form-control contact-form" id="name" aria-describedby="fnameHelp" placeholder="">
-    					<small id="nameHelp" class="form-text text-muted footer-contact contact">Name</small>
-					</div>
-    				<div class="form-group">
-    					<input type="email" class="form-control contact-form" id="email" aria-describedby="emailHelp" placeholder="">
-    					<small id="emailHelp" class="form-text text-muted footer-contact contact">Email</small>
-  					</div>
-		  			<div class="form-group">
-		    			<input type="text" class="form-control contact-form" id="subject" aria-describedby="subjectHelp" placeholder="">
-		    			<small id="subjectHelp" class="form-text text-muted footer-contact contact">Subject</small>
-		  			</div>
-  				</div>
-  				<div class="form-group col-md-6 col-md-offset-6">
-  					<div class="form-group">
-		    			<textarea rows="10" cols="70" class="contact-body" id="message">
-						</textarea>
-		    			<small id="bodyHelp" class="form-text text-muted footer-contact contact">Message</small>
-  					</div>
-  				</div>
+				<div class="col-md-6">
+					<form id="contact-form" method="post" role="form">
+						<div class="form-group col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control contact-form" id="name" aria-describedby="fnameHelp" placeholder="">
+		    					<small id="nameHelp" class="form-text text-muted footer-contact contact">Name</small>
+							</div>
+		    				<div class="form-group">
+		    					<input type="email" class="form-control contact-form" id="email" aria-describedby="emailHelp" placeholder="">
+		    					<small id="emailHelp" class="form-text text-muted footer-contact contact">Email</small>
+		  					</div>
+				  			<div class="form-group">
+				    			<input type="text" class="form-control contact-form" id="subject" aria-describedby="subjectHelp" placeholder="">
+				    			<small id="subjectHelp" class="form-text text-muted footer-contact contact">Subject</small>
+				  			</div>
+		  				</div>
+		  				<div class="form-group col-md-6 col-md-offset-6">
+		  					<div class="form-group">
+				    			<textarea rows="10" cols="70" class="contact-body" id="message">
+								</textarea>
+				    			<small id="bodyHelp" class="form-text text-muted footer-contact contact">Message</small>
+		  					</div>
+		  				</div>
+		  				<div class="form-group col-md-6">
+							<input type="submit" class="btn btn-send contact-button" value="SEND">
+		  				</div>
+					</form>
+				</div>
+				<div class="col-md-6 col-md-offset-6">
+					<p class="how-j-text">J</p>
+				</div>
 			</div>
-			<p class="lead">
-				<a href="finish.html" class="btn btn-lg btn-secondary contact-button" onclick="sendEmail()">Send</a>
-			</p>
 		</div>
 	</main>
 	<footer class="footer">
@@ -62,23 +95,4 @@
 		<p class="allrights">All Rights Reserved McRae Design</p>
 	</footer>
 </body>
-<script>
-	debugger;
-	function sendEmail(){
-		var name = document.getElementById('name').value;
-		var email = document.getElementById('email').value;
-		var subject = document.getElementById('subject').value;
-		var message = document.getElementById('message').value;
-		var template_params = {
-			   "from_name": name,
-			   "email" : email,
-			   "subject": subject,
-			   "message_html": message
-			}
-
-		var service_id = "default_service";
-		var template_id = "contact";
-		emailjs.send(service_id, template_id, template_params);	
-	}
-</script>
 </html>
