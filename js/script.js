@@ -1,4 +1,5 @@
 /*	gallery */
+// Portions of code were taken from this gallery demo by vivekbisht109: https://bootsnipp.com/snippets/N6vrp
 $(document).ready(function(){
 
     $(".filter-button").click(function(){
